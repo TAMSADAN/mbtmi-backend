@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Time;
+import java.time.LocalDateTime;
 import java.util.Map;
 
 @Entity
@@ -20,10 +21,10 @@ public class VotingPost {
     @ElementCollection
     private Map<String, Integer> content;
     private Integer likeCount;
-    private Time time;
+    private LocalDateTime time;
 
     @Builder
-    public VotingPost(Long memberId, String title, Map<String, Integer> content, Integer likeCount, Time time) {
+    public VotingPost(Long memberId, String title, Map<String, Integer> content, Integer likeCount, LocalDateTime time) {
         this.memberId = memberId;
         this.title = title;
         this.content = content;

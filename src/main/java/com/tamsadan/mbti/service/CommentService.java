@@ -5,6 +5,7 @@ import com.tamsadan.mbti.repository.CommentRepository;
 
 import javax.transaction.Transactional;
 import java.sql.Time;
+import java.time.LocalDateTime;
 
 @Transactional
 public class CommentService {
@@ -13,7 +14,7 @@ public class CommentService {
     public CommentService(CommentRepository commentRepository) {
         this.commentRepository = commentRepository;
     }
-    public Long join(Long postId, Long memberId, String content, Time time, Integer likeCount){
+    public Long join(Long postId, Long memberId, String content, LocalDateTime time, Integer likeCount){
         Comment comment = Comment.builder()
                 .postId(postId)
                 .memberId(memberId)

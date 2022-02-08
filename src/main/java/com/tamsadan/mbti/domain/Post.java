@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.sql.Time;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -17,10 +18,10 @@ public class Post {
     private String title;
     private String content;
     private Integer likeCount;
-    private Time time;
+    private LocalDateTime time;
 
     @Builder
-    public Post(Long memberId, String title, String content, Integer likeCount, Time time) {
+    public Post(Long memberId, String title, String content, Integer likeCount, LocalDateTime time) {
         this.memberId = memberId;
         this.title = title;
         this.content = content;

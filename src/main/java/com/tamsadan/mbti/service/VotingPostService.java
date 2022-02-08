@@ -5,6 +5,7 @@ import com.tamsadan.mbti.repository.VotingPostRepository;
 
 import javax.transaction.Transactional;
 import java.sql.Time;
+import java.time.LocalDateTime;
 import java.util.Map;
 
 @Transactional
@@ -14,7 +15,7 @@ public class VotingPostService {
     public VotingPostService(VotingPostRepository votingPostRepository) {
         this.votingPostRepository = votingPostRepository;
     }
-    public Long join(Long memberId, String title, Map<String, Integer> content, Integer likeCount, Time time){
+    public Long join(Long memberId, String title, Map<String, Integer> content, Integer likeCount, LocalDateTime time){
         VotingPost votingPost = VotingPost.builder()
                 .memberId(memberId)
                 .title(title)

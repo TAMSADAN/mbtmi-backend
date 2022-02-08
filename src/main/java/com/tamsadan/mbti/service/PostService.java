@@ -5,6 +5,9 @@ import com.tamsadan.mbti.repository.PostRepository;
 
 import javax.transaction.Transactional;
 import java.sql.Time;
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
 
 @Transactional
 public class PostService {
@@ -13,7 +16,7 @@ public class PostService {
     public PostService(PostRepository postRepository) {
         this.postRepository = postRepository;
     }
-    public Long join(Long memberId, String title, String content, Integer likeCount, Time time){
+    public Long join(Long memberId, String title, String content, Integer likeCount, LocalDateTime time){
         Post post = Post.builder()
                 .memberId(memberId)
                 .title(title)
@@ -23,5 +26,11 @@ public class PostService {
                 .build();
         postRepository.save(post);
         return post.getId();
+    }
+    public List<Post> findAll(){
+        return postRepository.findAll();
+    }
+    public Optional<Post> findById(Long id){
+        return postRepository.findById(id);
     }
 }

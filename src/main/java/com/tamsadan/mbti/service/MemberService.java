@@ -4,6 +4,8 @@ import com.tamsadan.mbti.domain.Member;
 import com.tamsadan.mbti.repository.MemberRepository;
 
 import javax.transaction.Transactional;
+import java.util.List;
+import java.util.Optional;
 
 @Transactional
 public class MemberService {
@@ -19,5 +21,11 @@ public class MemberService {
                 .build();
         memberRepository.save(member);
         return member.getId();
+    }
+    public List<Member> findAll(){
+        return memberRepository.findAll();
+    }
+    public Optional<Member> findMemberByLoginToken(String loginToken){
+        return memberRepository.findByLoginToken(loginToken);
     }
 }
