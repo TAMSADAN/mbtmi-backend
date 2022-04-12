@@ -1,2 +1,2 @@
-# mbti-station-backend
-Backend Repository For Mbti-Station Project
+# mbtmi
+Backend Repository For MBTMI Project
