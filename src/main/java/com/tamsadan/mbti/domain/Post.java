@@ -1,31 +1,32 @@
 package com.tamsadan.mbti.domain;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.sql.Time;
 import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @NoArgsConstructor
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn
 public class Post {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long memberId;
-    private String title;
-    private String content;
-    private Integer likeCount;
-    private LocalDateTime time;
+    protected Long id;
+    protected Long memberId;
+    protected String title;
+    protected String content;
+    protected Integer likeCount;
+    protected LocalDateTime time;
+    protected int commentCnt;
 
-    @Builder
-    public Post(Long memberId, String title, String content, Integer likeCount, LocalDateTime time) {
+    public Post(Long memberId, String title, String content, Integer likeCount, LocalDateTime time, int commentCnt) {
         this.memberId = memberId;
         this.title = title;
         this.content = content;
         this.likeCount = likeCount;
         this.time = time;
+        this.commentCnt = commentCnt;
     }
 }

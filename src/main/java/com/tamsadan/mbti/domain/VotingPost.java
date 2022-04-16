@@ -1,34 +1,31 @@
 package com.tamsadan.mbti.domain;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.sql.Time;
 import java.time.LocalDateTime;
-import java.util.Map;
+import java.util.List;
 
 @Entity
 @Getter
 @NoArgsConstructor
-public class VotingPost {
+@DiscriminatorValue("V")
+public class VotingPost extends Post{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long memberId;
-    private String title;
-    @ElementCollection
-    private Map<String, Integer> content;
-    private Integer likeCount;
-    private LocalDateTime time;
+    @OneToMany
+    private List<VotingPostOptions> votingPostOptions;
 
-    @Builder
-    public VotingPost(Long memberId, String title, Map<String, Integer> content, Integer likeCount, LocalDateTime time) {
-        this.memberId = memberId;
-        this.title = title;
-        this.content = content;
-        this.likeCount = likeCount;
-        this.time = time;
+    public VotingPost(Long id, List<VotingPostOptions> votingPostOptions) {
+        this.id = id;
+        this.votingPostOptions = votingPostOptions;
+    }
+
+    public VotingPost(Long memberId, String title, String content, Long id, List<VotingPostOptions> votingPostOptions) {
+        super(memberId, title, content, 0, LocalDateTime.now(), 0);
+        this.id = id;
+        this.votingPostOptions = votingPostOptions;
     }
 }
