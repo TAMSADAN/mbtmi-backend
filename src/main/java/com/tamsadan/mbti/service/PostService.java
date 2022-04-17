@@ -2,6 +2,7 @@ package com.tamsadan.mbti.service;
 
 import com.tamsadan.mbti.domain.Post;
 import com.tamsadan.mbti.repository.PostRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -10,12 +11,10 @@ import java.util.Optional;
 
 @Service
 @Transactional
+@RequiredArgsConstructor
 public class PostService {
     private final PostRepository postRepository;
 
-    public PostService(PostRepository postRepository) {
-        this.postRepository = postRepository;
-    }
     public List<Post> findAll(){
         return postRepository.findAll();
     }
