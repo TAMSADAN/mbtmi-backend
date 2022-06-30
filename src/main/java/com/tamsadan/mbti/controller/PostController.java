@@ -18,17 +18,4 @@ import java.util.Optional;
 @RequestMapping(value = "/api/v1/post")
 public class PostController {
     private final PostService postService;
-    private final UserService userService;
-
-    @GetMapping(value = "/list")
-    @ResponseBody
-    public List<Post> getPostList(){
-        return postService.findAll();
-    }
-
-    @GetMapping(value = "/{postId}")
-    @ResponseBody
-    public Optional<Post> getPostByPostId(@PathVariable Long postId){
-        return postService.findById(postId);
-    }
 }

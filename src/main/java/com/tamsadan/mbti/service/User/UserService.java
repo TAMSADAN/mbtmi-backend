@@ -12,5 +12,8 @@ import javax.transaction.Transactional;
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
+    public User save(String userId, String mbti){
+        return userRepository.save(new User(userId, mbti));
+    }
 }
 
