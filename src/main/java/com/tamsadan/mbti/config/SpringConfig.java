@@ -4,10 +4,10 @@ import com.tamsadan.mbti.repository.Post.CommentRepository;
 import com.tamsadan.mbti.repository.User.UserRepository;
 import com.tamsadan.mbti.repository.Post.PostRepository;
 import com.tamsadan.mbti.repository.Post.VotingPostRepository;
-import com.tamsadan.mbti.service.CommentService;
-import com.tamsadan.mbti.service.UserService;
-import com.tamsadan.mbti.service.PostService;
-import com.tamsadan.mbti.service.VotingPostService;
+import com.tamsadan.mbti.service.Post.CommentService;
+import com.tamsadan.mbti.service.User.UserService;
+import com.tamsadan.mbti.service.Post.PostService;
+import com.tamsadan.mbti.service.Post.VotingPostService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

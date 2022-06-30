@@ -1,8 +1,8 @@
 package com.tamsadan.mbti.controller;
 
 import com.tamsadan.mbti.domain.Post.Post;
-import com.tamsadan.mbti.service.PostService;
-import com.tamsadan.mbti.service.UserService;
+import com.tamsadan.mbti.service.Post.PostService;
+import com.tamsadan.mbti.service.User.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

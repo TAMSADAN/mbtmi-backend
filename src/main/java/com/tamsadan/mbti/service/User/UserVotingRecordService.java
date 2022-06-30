@@ -1,4 +1,4 @@
-package com.tamsadan.mbti.service;
+package com.tamsadan.mbti.service.User;
 
 import com.tamsadan.mbti.repository.User.UserVotingRecordRepository;
 import lombok.RequiredArgsConstructor;

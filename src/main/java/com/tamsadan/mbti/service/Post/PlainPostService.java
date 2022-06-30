@@ -1,4 +1,4 @@
-package com.tamsadan.mbti.service;
+package com.tamsadan.mbti.service.Post;
 
 import com.tamsadan.mbti.domain.Post.PlainPost;
 import com.tamsadan.mbti.repository.Post.PlainPostRepository;
@@ -14,13 +14,4 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class PlainPostService {
     private final PlainPostRepository plainPostRepository;
-    public List<PlainPost> getPlainPostList(){
-        return plainPostRepository.findAll();
-    }
-    public Optional<PlainPost> getPlainPostById(Long id){
-        return plainPostRepository.findById(id);
-    }
-    public void joinPlainPost(PlainPost plainPost){
-        plainPostRepository.save(plainPost);
-    }
 }

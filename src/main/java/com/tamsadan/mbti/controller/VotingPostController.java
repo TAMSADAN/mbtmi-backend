@@ -1,6 +1,6 @@
 package com.tamsadan.mbti.controller;
 
-import com.tamsadan.mbti.service.VotingPostService;
+import com.tamsadan.mbti.service.Post.VotingPostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

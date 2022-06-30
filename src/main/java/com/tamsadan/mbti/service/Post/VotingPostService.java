@@ -1,4 +1,4 @@
-package com.tamsadan.mbti.service;
+package com.tamsadan.mbti.service.Post;
 
 import com.tamsadan.mbti.repository.Post.VotingPostRepository;
 import lombok.RequiredArgsConstructor;

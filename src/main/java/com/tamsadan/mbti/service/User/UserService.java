@@ -1,4 +1,4 @@
-package com.tamsadan.mbti.service;
+package com.tamsadan.mbti.service.User;
 
 import com.tamsadan.mbti.domain.User.User;
 import com.tamsadan.mbti.repository.User.UserRepository;
@@ -12,16 +12,5 @@ import javax.transaction.Transactional;
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
-
-    public User getUser(String userSeq) {
-        return userRepository.findByUserId(userSeq);
-    }
-    public User joinUser(User user){
-        userRepository.save(user);
-        return user;
-    }
-    public void deleteUserByUserSeq(Long userSeq){
-        userRepository.deleteById(userSeq);
-    }
 }
 
