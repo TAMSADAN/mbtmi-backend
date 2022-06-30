@@ -1,6 +1,6 @@
 package com.tamsadan.mbti.service;
 
-import com.tamsadan.mbti.repository.VotingPostRepository;
+import com.tamsadan.mbti.repository.Post.VotingPostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

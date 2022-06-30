@@ -1,4 +1,4 @@
-package com.tamsadan.mbti.repository;
+package com.tamsadan.mbti.repository.Post;
 
 import com.tamsadan.mbti.domain.Post.Comment;
 import org.springframework.data.jpa.repository.JpaRepository;

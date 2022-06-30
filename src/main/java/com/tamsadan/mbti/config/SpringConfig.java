@@ -1,9 +1,9 @@
 package com.tamsadan.mbti.config;
 
-import com.tamsadan.mbti.repository.CommentRepository;
-import com.tamsadan.mbti.repository.UserRepository;
-import com.tamsadan.mbti.repository.PostRepository;
-import com.tamsadan.mbti.repository.VotingPostRepository;
+import com.tamsadan.mbti.repository.Post.CommentRepository;
+import com.tamsadan.mbti.repository.User.UserRepository;
+import com.tamsadan.mbti.repository.Post.PostRepository;
+import com.tamsadan.mbti.repository.Post.VotingPostRepository;
 import com.tamsadan.mbti.service.CommentService;
 import com.tamsadan.mbti.service.UserService;
 import com.tamsadan.mbti.service.PostService;

@@ -1,4 +1,4 @@
-package com.tamsadan.mbti.repository;
+package com.tamsadan.mbti.repository.User;
 
 import com.tamsadan.mbti.domain.User.User;
 import org.springframework.data.jpa.repository.JpaRepository;
