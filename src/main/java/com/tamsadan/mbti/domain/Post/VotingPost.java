@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @DiscriminatorValue("V")
 public class VotingPost extends Post{
-    public VotingPost(Long userId, String title, String content) {
+    public VotingPost(String userId, String title, String content) {
         super(userId, title, content);
     }
 }

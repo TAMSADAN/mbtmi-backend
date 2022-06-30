@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @DiscriminatorValue("B")
 public class BalanceGamePost extends Post{
-    public BalanceGamePost(Long userId, String title) {
+    public BalanceGamePost(String userId, String title) {
         super(userId, title, "");
     }
 }

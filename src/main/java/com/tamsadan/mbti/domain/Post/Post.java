@@ -15,7 +15,7 @@ import java.util.UUID;
 public class Post {
     @Id
     protected String postId;
-    protected Long userId;
+    protected String userId;
     protected String title;
     protected String content;
     protected Integer likeCount;
@@ -23,7 +23,7 @@ public class Post {
     protected int commentCnt;
     protected int viewCnt;
 
-    public Post(Long userId, String title, String content) {
+    public Post(String userId, String title, String content) {
         this.postId = UUID.randomUUID().toString().substring(0, 8);
         this.userId = userId;
         this.title = title;

@@ -9,7 +9,7 @@ import javax.persistence.*;
 @DiscriminatorValue("P")
 public class PlainPost extends Post{
 
-    public PlainPost(Long userId, String title, String content) {
+    public PlainPost(String userId, String title, String content) {
         super(userId, title, content);
     }
 }

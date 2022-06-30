@@ -14,4 +14,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class PlainPostService {
     private final PlainPostRepository plainPostRepository;
+    public PlainPost save(String userId, String title, String content){
+        return plainPostRepository.save(new PlainPost(userId, title, content));
+    }
 }
