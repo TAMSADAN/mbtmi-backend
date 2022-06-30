@@ -1,4 +1,4 @@
-package com.tamsadan.mbti.domain;
+package com.tamsadan.mbti.domain.Post;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -16,19 +16,20 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Comment {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long comment_id;
     private Long postId;
-    private Long memberId;
+    private Long userId;
+    private Long parentId;
     private String content;
-    private LocalDateTime time;
+    private String time;
     private Integer likeCount;
 
-    @Builder
-    public Comment(Long postId, Long memberId, String content, LocalDateTime time, Integer likeCount) {
+    public Comment(Long postId, Long userId, Long parentId, String content, Integer likeCount) {
         this.postId = postId;
-        this.memberId = memberId;
+        this.userId = userId;
+        this.parentId = parentId;
         this.content = content;
-        this.time = time;
+        this.time = LocalDateTime.now().toString();
         this.likeCount = likeCount;
     }
 }

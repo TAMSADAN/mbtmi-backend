@@ -1,6 +1,6 @@
 package com.tamsadan.mbti.controller;
 
-import com.tamsadan.mbti.domain.Post;
+import com.tamsadan.mbti.domain.Post.Post;
 import com.tamsadan.mbti.service.PostService;
 import com.tamsadan.mbti.service.UserService;
 import lombok.RequiredArgsConstructor;

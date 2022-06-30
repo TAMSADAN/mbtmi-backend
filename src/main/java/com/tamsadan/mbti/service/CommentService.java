@@ -1,6 +1,6 @@
 package com.tamsadan.mbti.service;
 
-import com.tamsadan.mbti.domain.Comment;
+import com.tamsadan.mbti.domain.Post.Comment;
 import com.tamsadan.mbti.repository.CommentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

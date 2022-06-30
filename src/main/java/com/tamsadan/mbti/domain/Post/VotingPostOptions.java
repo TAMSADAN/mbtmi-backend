@@ -1,4 +1,4 @@
-package com.tamsadan.mbti.domain;
+package com.tamsadan.mbti.domain.Post;
 
 import lombok.Getter;
 
@@ -11,7 +11,6 @@ public class VotingPostOptions {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String voting_option;
-    @OneToMany
-    private List<VotingPostResults> votingPostResults;
+    private String postId;
+    private String votingOption;
 }

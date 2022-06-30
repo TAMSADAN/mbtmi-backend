@@ -1,6 +1,6 @@
 package com.tamsadan.mbti.service;
 
-import com.tamsadan.mbti.domain.PlainPost;
+import com.tamsadan.mbti.domain.Post.PlainPost;
 import com.tamsadan.mbti.repository.PlainPostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
